@@ -1,7 +1,8 @@
 from django.db import models
 
 
-# Create your models here.
+# Citation: Used this for URLField
+# https://www.geeksforgeeks.org/urlfield-django-models/
 class Manufacturer(models.Model):
     name = models.CharField(max_length=50)
     url = models.URLField(max_length=150)

@@ -6,6 +6,9 @@ class Manufacturer(models.Model):
     name = models.CharField(max_length=50)
     url = models.URLField(max_length=150)
 
+    def __str__(self):
+        return self.name
+
 
 class ShoeType(models.Model):
     style = models.CharField(max_length=30)

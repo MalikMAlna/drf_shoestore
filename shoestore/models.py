@@ -14,6 +14,9 @@ class Manufacturer(models.Model):
 class ShoeType(models.Model):
     style = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.style
+
 
 class ShoeColor(models.Model):
     RED = 'R'
@@ -35,6 +38,9 @@ class ShoeColor(models.Model):
         (BLACK, 'Black'),
     ]
     color_name = models.CharField(max_length=2, choices=COLOR_NAME_CHOICES)
+
+    def __str__(self):
+        return self.color_name
 
 
 class Shoe(models.Model):

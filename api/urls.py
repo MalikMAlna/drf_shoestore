@@ -7,7 +7,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 
 router.register(r'manufacturer', ManufacturerViewSet, basename='manufacturer')
-router.register(r'color', ShoeColorViewSet, basename='color')
+router.register(r'color', ShoeColorViewSet, basename='color_name')
 router.register(r'type', ShoeTypeViewSet, basename='type')
 router.register(r'shoe', ShoeViewSet, basename='shoe')
 

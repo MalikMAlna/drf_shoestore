@@ -25,7 +25,7 @@ SECRET_KEY = '2tcw!yra$lr6&%dwc03a4cc=g_l)%h+f=tj7!kf8k-htutd$df'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'shoestore',
     'api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,6 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'drf_shoestore.wsgi.application'
 
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

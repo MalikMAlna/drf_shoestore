@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, HyperlinkedModelSerializer
 
 from shoestore.models import Manufacturer, ShoeColor, ShoeType, Shoe
 
